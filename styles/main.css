@@ -1,0 +1,22 @@
+main {
+  margin: 2.875rem 2.25rem;
+
+  #title {
+    sub {
+      font: var(--overline);
+      background: linear-gradient(to right, var(--gradient-content));
+      -webkit-background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+    }
+  }
+
+  #drawer {
+    margin-block: 2.625rem 5rem;
+
+    fieldset {
+      margin-block: 2.5rem;
+      border: none;
+    }
+  }
+}

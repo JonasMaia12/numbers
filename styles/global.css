@@ -44,24 +44,36 @@
   --paragraph-large: normal 1rem/1.5 var(--font-roboto-flex);
   --paragraph-medium: normal 0.875rem/1.5 var(--font-roboto-flex);
   --paragraph-small: normal 0.75rem/1.5 var(--font-roboto-flex);
+
   --label-medium: bold 1.25rem/1.5 var(--font-roboto-flex);
   --label-small: bold 1rem/1.5 var(--font-roboto-flex);
 }
 
-html {
-  background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 1)
-    ),
+body {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)),
     url(../assets/background.svg);
   background-color: var(--background-primary);
-  height: 100vh;
+  color: var(--content-primary);
 }
 
-body {
-  max-width: 1098px;
-  margin: 73px auto 153px;
+h1 {
+  font: var(--display-medium);
+  text-transform: uppercase;
+}
+
+h2 {
+  font: var(--label-medium);
+  text-transform: uppercase;
+}
+
+h3 {
+  font: var(--paragraph-medium);
+  color: var(--content-brand);
+}
+
+p {
+  font: var(--paragraph-medium);
+  color: var(--content-tertiary);
 }
 
 a {

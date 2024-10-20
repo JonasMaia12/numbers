@@ -1,7 +1,9 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.688rem;
+  margin-top: 2.75rem;
 
   span {
     font: 800 1.5rem/1.3 var(--font-sora);
