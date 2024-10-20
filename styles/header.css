@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.688rem;
+
+  span {
+    font: 800 1.5rem/1.3 var(--font-sora);
+    color: var(--content-primary);
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+  }
+}

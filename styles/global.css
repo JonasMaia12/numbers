@@ -49,7 +49,19 @@
 }
 
 html {
-  
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 1)
+    ),
+    url(../assets/background.svg);
+  background-color: var(--background-primary);
+  height: 100vh;
+}
+
+body {
+  max-width: 1098px;
+  margin: 73px auto 153px;
 }
 
 a {
