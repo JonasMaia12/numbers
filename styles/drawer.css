@@ -2,8 +2,6 @@
   margin-block: 2.625rem 5rem;
 
   .raffling {
-    display: none;
-
     .input-numbers {
       display: flex;
       margin-block: 2.5rem 1.25rem;
@@ -38,11 +36,20 @@
         color: var(--content-primary);
         text-align: center;
         outline: none;
-        border: 2px solid transparent;
         transition: 0.4s;
 
-        &:focus,
         &:hover {
+          background: var(--background-tertiary);
+          border-image: linear-gradient(to right, var(--gradient-border));
+          border-image-slice: 1;
+
+          &:focus {
+            border-width: 2px;
+          }
+        }
+
+        &:focus {
+          border-width: 2px;
           background: var(--background-tertiary);
           border-image: linear-gradient(to right, var(--gradient-border));
           border-image-slice: 1;
@@ -112,8 +119,6 @@
   }
 
   .drawn {
-    /* display: none; */
-
     h2 {
       text-align: center;
     }
@@ -123,18 +128,18 @@
       justify-content: center;
       gap: 0.25rem;
       margin-block: 2.5rem;
+      flex-wrap: wrap;
 
       .container-number {
-        width: 100px;
-        height: 100px;
-        background: #c58de7;
-        border-radius: 28px;
-
+        width: 6.25rem;
+        height: 6.25rem;
+        background: var(--content-brand);
+        background: var();
+        border-radius: 1.75rem;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        animation: containerAnim 4s forwards;
+        animation: containerAnim 6s forwards;
 
         span {
           font-family: var(--font-roboto-mono);
@@ -143,10 +148,8 @@
           font-size: 3rem;
           line-height: 150%;
           text-transform: uppercase;
-
           color: var(--color-inverse);
-
-          animation: colorText 8s forwards;
+          animation: colorText 6s forwards;
         }
       }
     }
@@ -168,22 +171,37 @@
 
 @keyframes containerAnim {
   0% {
-    background: var(--color-inverse);
-    transform: rotate(0deg);
+    transform: scale(0.1);
+    background: var(--content-brand);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   }
-
+  25% {
+    transform: scale(1.1);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+  }
   50% {
-    background: #c58de7;
+    transform: scale(1);
+    background: var(--content-brand);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   }
-
   100% {
-    background: var(--color-inverse);
-    transform: rotate(360deg);
+    transform: scale(1) rotate(360deg);
+    background: transparent;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
   }
 }
 
 @keyframes colorText {
-  to {
+  0% {
+    transform: rotate(0deg);
+    color: var(--color-inverse);
+  }
+  50% {
+    transform: rotate(0deg);
+    color: var(--color-inverse);
+  }
+  100% {
+    transform: rotate(-360deg);
     color: var(--content-brand);
   }
 }
