@@ -28,55 +28,78 @@
 
       <section id="drawer">
         <form>
-          <fieldset>
-            <legend>
-              <h2>Quero sortear:</h2>
-              <p>
-                Defina o intervalo e a quantidade de números, clique em
-                "Sortear" e veja os resultados na tela. É rápido e fácil!
-              </p>
-            </legend>
+          <div class="raffling">
+            <fieldset>
+              <legend>
+                <h2>Quero sortear:</h2>
+                <p>
+                  Defina o intervalo e a quantidade de números, clique em
+                  "Sortear" e veja os resultados na tela. É rápido e fácil!
+                </p>
+              </legend>
 
-            <div class="input-numbers">
-              <div>
-                <label for="number">números</label>
-                <input
-                  type="number"
-                  value="2"
-                  id="number"
-                  name="number"
-                  required
-                />
+              <div class="input-numbers">
+                <div>
+                  <label for="number">números</label>
+                  <input
+                    type="number"
+                    value="2"
+                    id="number"
+                    name="number"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="from">de</label>
+                  <input
+                    type="number"
+                    value="1"
+                    id="from"
+                    name="from"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="to">até</label>
+                  <input type="number" value="100" id="to" name="to" required />
+                </div>
               </div>
 
-              <div>
-                <label for="from">de</label>
-                <input type="number" value="1" id="from" name="from" required />
+              <div class="content-switch">
+                <div class="switch">
+                  <input type="checkbox" checked />
+                  <div class="toggle"></div>
+                </div>
+                <p>Não repetir número</p>
               </div>
-
-              <div>
-                <label for="to">até</label>
-                <input type="number" value="100" id="to" name="to" required />
-              </div>
-            </div>
-
-            <div class="content-switch">
-              <div class="switch">
-                <input type="checkbox" checked />
-                <div class="toggle"></div>
-              </div>
-              <p>Não repetir número</p>
-            </div>
-          </fieldset>
-
-          <div>
-            <button type="submit">Sortear</button>
+            </fieldset>
           </div>
+
+          <div class="drawn">
+            <fieldset>
+              <h2>Resultado do sorteio</h2>
+              <div class="results">
+                <div class="container-number">
+                  <span>23</span>
+                </div>
+                <div class="container-number">
+                  <span>12</span>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button type="submit">
+            Sortear
+            <img src="./assets/icons/arrow.svg" />
+          </button>
         </form>
       </section>
 
       <section id="content">
-        <div>
+        <div class="container">
           <img src="./assets/icons/speaker.svg" />
           <div>
             <h3>Como funciona o sorteador de números?</h3>
@@ -86,7 +109,8 @@
             </p>
           </div>
         </div>
-        <div>
+
+        <div class="container">
           <img src="./assets/icons/speaker.svg" />
           <div>
             <h3>Posso escolher o intervalo dos números?</h3>

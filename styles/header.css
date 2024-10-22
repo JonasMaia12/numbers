@@ -12,3 +12,12 @@ header {
     letter-spacing: -0.04em;
   }
 }
+
+@media (width > 425px) {
+  header {
+    max-width: 1126px;
+    margin-inline: auto;
+    justify-content: flex-start;
+    margin-top: 4.75rem;
+  }
+}

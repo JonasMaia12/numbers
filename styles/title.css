@@ -1,0 +1,17 @@
+#title {
+  sub {
+    font: var(--overline);
+    background: linear-gradient(to right, var(--gradient-content));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+  }
+}
+
+@media (width > 425px) {
+  #title {
+    grid-area: title;
+    max-width: 31.875rem;
+    margin-bottom: 2.375rem;
+  }
+}
